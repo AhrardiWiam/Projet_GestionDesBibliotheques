@@ -2,7 +2,8 @@
 
 Ce projet met en œuvre BookSmart, une application web conçue pour gérer efficacement une bibliotheques avec ses fonctionnalités fluides de gestion des collections de livres . Développé avec Spring Boot et Thymeleaf, il permet aux utilisateurs d'ajouter, de modifier, de supprimer et de consulter des informations détaillées sur les livres, y compris les informations sur leurs auteurs.
 
-### Fonctionnalités principales
+
+## Fonctionnalités principales
 
 * *Ajouter des livres :* Créer de nouvelles entrées de livres, en spécifiant le titre, le genre, la date de publication ,la couverture du livre et les auteurs associés.
 * *Modifier des livres :* Modifier les informations existantes sur les livres, y compris le titre, le genre, la date de publication ,la couverture et les associations d'auteurs.
@@ -13,7 +14,8 @@ Ce projet met en œuvre BookSmart, une application web conçue pour gérer effic
 * *Interface conviviale :* Offre une interface intuitive construite avec Thymeleaf pour une facilité d'utilisation et un attrait visuel.
 * *Intégration de la base de données :* Utilise Spring Data JPA pour une interaction transparente avec une base de données MySQL afin de stocker et de gérer les données sur les livres et les auteurs.
 
-### Prise en main
+
+## Prise en main
 
 1. *Cloner le référentiel :* git clone [URL du référentiel]
 2. *Naviguer vers le répertoire du projet :* cd BookSmart
@@ -26,14 +28,16 @@ Ce projet met en œuvre BookSmart, une application web conçue pour gérer effic
    - Exécuter ./mvnw spring-boot:run pour démarrer l'application.
 6. *Accéder à l'application :*
    - Ouvrir votre navigateur et naviguer vers http://localhost:8080.
-  
-### Technologies utilisés
+
+
+## Technologies utilisés
+
  * *Front-end : HTML, CSS, Thymeleaf, bootstrap ,JavaScript*
  *  *Back-end : Spring-Boot MVC*
  *  *Base de Données : MySql*
 
 
-### Structure du projet
+## Structure du projet
 
 Le projet est structuré comme suit :
 
@@ -55,14 +59,16 @@ Le projet est structuré comme suit :
   - *templates:* Contient les modèles HTML pour les pages web de l'application.
   - *static:* Contient les fichiers CSS et JavaScript pour le style et l'interactivité.
 
-### Améliorations futures
-
+## Améliorations futures
+* *Mettre en œuvre une interface aux administrateur qui gerent les bibliotheques et une interface user pour les abonnés d'une bibliotheque. 
 * *Mettre en œuvre l'authentification des utilisateurs :* Ajouter des fonctionnalités de connexion et d'inscription des utilisateurs pour un accès sécurisé au système de gestion de bibliothèque.
 * *Ajouter d'autres critères de recherche :* Permettre aux utilisateurs de rechercher des livres par genre, auteur ou date de publication.
 * *Mettre en œuvre un système de prêt :* Ajouter des fonctionnalités pour suivre les prêts de livres et les notifications de retard.
 * *Améliorer l'expérience utilisateur :* Ajouter des fonctionnalités comme le tri, la pagination et le filtrage pour améliorer la navigation et la convivialité.
 
-### Demonstration
+
+## Démonstration :
+
 
  * *Ajout d'un livre et l'affichage à l'aide de la page de détails:*
 
