@@ -1,12 +1,12 @@
 # BookSmart : Un système de gestion de bibliothèque intelligent
 
-Ce projet met en œuvre BookSmart, une application web conçue pour gérer efficacement une collection de livres. Développé avec Spring Boot et Thymeleaf, il permet aux utilisateurs d'ajouter, de modifier, de supprimer et de consulter des informations détaillées sur les livres, y compris les informations sur leurs auteurs.
+Ce projet met en œuvre BookSmart, une application web conçue pour gérer efficacement une bibliotheques avec ses fonctionnalités fluides de gestion des collections de livres . Développé avec Spring Boot et Thymeleaf, il permet aux utilisateurs d'ajouter, de modifier, de supprimer et de consulter des informations détaillées sur les livres, y compris les informations sur leurs auteurs.
 
 ### Fonctionnalités principales
 
-* *Ajouter des livres :* Créer de nouvelles entrées de livres, en spécifiant le titre, le genre, la date de publication et les auteurs associés.
-* *Modifier des livres :* Modifier les informations existantes sur les livres, y compris le titre, le genre, la date de publication et les associations d'auteurs.
-* *Supprimer des livres :* Supprimer les livres du catalogue de la bibliothèque.
+* *Ajouter des livres :* Créer de nouvelles entrées de livres, en spécifiant le titre, le genre, la date de publication ,la couverture du livre et les auteurs associés.
+* *Modifier des livres :* Modifier les informations existantes sur les livres, y compris le titre, le genre, la date de publication ,la couverture et les associations d'auteurs.
+* *Supprimer des livres :* Supprimer les livres de la bibliothèque.
 * *Afficher les détails des livres :* Accéder à des informations détaillées sur un livre spécifique, y compris son genre, sa date de publication et une liste de ses auteurs avec leurs biographies.
 * *Rechercher des livres :* Rechercher des livres par titre à l'aide d'une simple barre de recherche.
 * *Gérer les auteurs :* Ajouter de nouveaux auteurs avec leurs biographies, les associer à des livres et gérer les associations d'auteurs.
@@ -26,6 +26,12 @@ Ce projet met en œuvre BookSmart, une application web conçue pour gérer effic
    - Exécuter ./mvnw spring-boot:run pour démarrer l'application.
 6. *Accéder à l'application :*
    - Ouvrir votre navigateur et naviguer vers http://localhost:8080.
+  
+### Technologies utilisés
+ * *Front-end : HTML, CSS, Thymeleaf, bootstrap ,JavaScript*
+ *  *Back-end : Spring-Boot MVC*
+ *  *Base de Données : MySql*
+
 
 ### Structure du projet
 
@@ -58,17 +64,20 @@ Le projet est structuré comme suit :
 
 ### Demonstration
 
- * *Ajout d'un livre et l'affichage à l'aide de la page de détails:
+ * *Ajout d'un livre et l'affichage à l'aide de la page de détails:*
 
 https://github.com/user-attachments/assets/dd0301af-32cf-4a9c-b92c-973755b75890
 
 
-* *Le controle d'erreur (Ajout d'un livre invalide) :
+* *Le controle d'erreur (Ajout d'un livre invalide) :*
 
 
 https://github.com/user-attachments/assets/238a93d5-696e-4787-8d1a-3e30bbd250eb
 
 
-* *Modifier , supprimer et chercher un livre :
+* *Modifier , supprimer et chercher un livre :*
  
+
+https://github.com/user-attachments/assets/90b0cc98-86af-4d80-a238-80bcd51cf2ff
+
 
