@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Détails du Livre - BookSmart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F5F5DC; /* beige clair */
+            color: #4E342E; /* brun foncé */
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 1rem;
+            color: #4E342E; /* brun foncé */
+        }
+
+        .header h1 {
+            font-size: 2.5rem; /* Taille du titre */
+            display: inline-block; /* Permet de garder l'icône et le titre sur la même ligne */
+            margin: 0 10px; /* Ajoute de l'espace autour du titre */
+            font-style: italic
+        }
+
+        .library-icon {
+            font-size: 2.5rem; /* Taille de l'icône de livre */
+            color: #B8860B; /* Doré */
+        }
+
+        .details {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: white; /* Fond blanc pour le détail */
+            border: 1px solid #B8860B; /* Bordure dorée */
+            border-radius: 8px; /* Coins arrondis */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+        }
+
+        .auteur-card {
+            background-color: #f9f9f9; /* Couleur de fond des cartes d'auteur */
+            border: 1px solid #B8860B; /* Bordure dorée */
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px; /* Coins arrondis */
+        }
+
+        .btn-secondary {
+            background-color: #4E342E; /* brun foncé */
+            color: white;
+            border-color: #4E342E;
+        }
+
+        .img-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #B8860B;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>
+            Détail du Livre <span th:text="${livre.titre}"></span>
+            <i class="fas fa-book library-icon"></i> <!-- Icône de livre -->
+        </h1>
+    </div>
+
+    <div class="row">
+        <!-- Colonne pour les détails du livre -->
+        <div class="col-md-8">
+            <div class="details">
+                <p><strong>Genre :</strong> <span th:text="${livre.genre}"></span></p>
+                <p><strong>Date de Publication :</strong> <span th:text="${livre.datePublication}"></span></p>
+
+                <h3>Auteurs :</h3>
+                <div th:each="auteurLivre : ${livre.auteursLivres}">
+                    <div class="auteur-card">
+                        <p><strong>Nom :</strong> <span th:text="${auteurLivre.auteur.nom}"></span></p>
+                        <p><strong>Biographie :</strong> <span th:text="${auteurLivre.auteur.biographie}"></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/" class="btn btn-secondary mt-3"><i class="fas fa-arrow-left"></i> Retour à la liste des
+                livres</a>
+            <a th:href="@{'/modifier/' + ${livre.id}}" class="btn btn-secondary mt-3">Modifier <i
+                    class="fas fa-pencil-alt"></i></a>
+            <a th:href="@{'/supprimer/' + ${livre.id}}" class="btn btn-secondary mt-3"
+               onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce livre ?');">Supprimer <i
+                    class="fas fa-trash"></i></a>
+            </td>
+        </div>
+        <!-- Colonne pour l'image du livre -->
+        <div class="col-md-4">
+            <div class="img-container">
+                <img th:src="${livre.imageUrl}" alt="Image du livre" onerror="this.onerror=null; this.src='https://cdn.vectorstock.com/i/preview-1x/92/18/old-closed-book-wisdom-or-education-concept-vector-43289218.jpg';"/>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

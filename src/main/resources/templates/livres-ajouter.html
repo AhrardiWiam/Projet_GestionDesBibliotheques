@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ajouter un Livre à BookSmart</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F5F5DC;
+            color: #4E342E;
+        }
+
+        h1 {
+            color: #B8860B;
+        }
+
+        label {
+            color: #4E342E;
+        }
+
+        .btn {
+            background-color: #B8860B;
+            color: white;
+        }
+
+        .author-fields {
+            margin-top: 10px;
+            padding: 15px;
+            border: 1px solid #B8860B;
+            border-radius: 5px;
+            background-color: #fcf7f2;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center my-4">Ajouter un Livre à BookSmart <i class="fas fa-book"></i></h1>
+
+    <div th:if="${errorMessage}" class="alert alert-danger" th:text="${errorMessage}"></div>
+
+    <form th:action="@{/ajouter}" th:object="${livre}" method="post">
+        <!-- Informations de base du livre -->
+        <div class="form-group">
+            <label for="titre">Titre :</label>
+            <input type="text" id="titre" th:field="*{titre}" class="form-control" required/>
+        </div>
+        <div class="form-group">
+            <label for="genre">Genre :</label>
+            <input type="text" id="genre" th:field="*{genre}" class="form-control" required/>
+        </div>
+        <div class="form-group">
+            <label for="datePublication">Date de Publication :</label>
+            <input type="date" id="datePublication" th:field="*{datePublication}" class="form-control" required/>
+        </div>
+        <div class="form-group">
+            <label for="imageUrl">URL de l'image :</label>
+            <input type="text" id="imageUrl" name="imageUrl" class="form-control"/>
+        </div>
+        <!-- Choix des auteurs existants ou ajout de nouveaux auteurs -->
+        <h3 class="my-4">Auteurs</h3>
+
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="selectAuthorsCheckbox"
+                   onchange="toggleAuthorSelection()">
+            <label class="form-check-label" for="selectAuthorsCheckbox">Sélectionner parmi les auteurs existants</label>
+        </div>
+
+        <div id="existingAuthorsSection" style="display: none;">
+            <label for="auteurIds">Choisir des auteurs :</label>
+            <select id="auteurIds" name="auteurIds" class="form-control" multiple size="5">
+                <option th:each="auteur : ${auteurs}" th:value="${auteur.id}" th:text="${auteur.nom}"></option>
+            </select>
+            <small>Appuyez sur Ctrl (ou Cmd sur Mac) pour sélectionner plusieurs auteurs.</small>
+        </div>
+
+        <div class="form-check mt-3 mb-2">
+            <input class="form-check-input" type="checkbox" id="createAuthorCheckbox"
+                   onchange="toggleNewAuthorSection()">
+            <label class="form-check-label" for="createAuthorCheckbox">Ajouter des auteurs</label>
+        </div>
+
+        <div id="newAuthorsContainer" style="display: none;">
+            <div class="author-fields">
+                <label for="nouveauxNoms">Nom de l'Auteur :</label>
+                <input type="text" name="nouveauxNoms[]" class="form-control" placeholder="Nom du nouvel auteur"/>
+                <label for="nouvellesBiographies">Biographie :</label>
+                <textarea name="nouvellesBiographies[]" class="form-control"
+                          placeholder="Biographie du nouvel auteur"></textarea>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-light mt-2" id="addAuthorButton" onclick="addAuthorFields()"
+                style="display: none;">Ajouter un autre auteur
+        </button>
+
+        <button type="submit" class="btn mt-4"><i class="fas fa-plus"></i> Ajouter</button>
+        <a href="/" class="btn btn-secondary mt-4"><i class="fas fa-times"></i> Annuler</a>
+    </form>
+</div>
+
+<script>
+    function toggleAuthorSelection() {
+        let existingAuthorsSection = document.getElementById("existingAuthorsSection");
+        existingAuthorsSection.style.display = existingAuthorsSection.style.display === "none" ? "block" : "none";
+    }
+
+    function toggleNewAuthorSection() {
+        const newAuthorsContainer = document.getElementById("newAuthorsContainer");
+        const addAuthorButton = document.getElementById("addAuthorButton");
+
+        if (document.getElementById("createAuthorCheckbox").checked) {
+            newAuthorsContainer.style.display = "block";
+            addAuthorButton.style.display = "block"; // Afficher le bouton pour ajouter un auteur
+        } else {
+            newAuthorsContainer.style.display = "none";
+            addAuthorButton.style.display = "none"; // Cacher le bouton si la case n'est pas cochée
+        }
+    }
+
+    function addAuthorFields() {
+        const authorContainer = document.getElementById("newAuthorsContainer");
+        const newAuthorFields = document.createElement("div");
+        newAuthorFields.className = "author-fields";
+        newAuthorFields.innerHTML = `
+            <label for="nouveauxNoms">Nom de l'Auteur :</label>
+            <input type="text" name="nouveauxNoms[]" class="form-control" placeholder="Nom du nouvel auteur"/>
+            <label for="nouvellesBiographies">Biographie :</label>
+            <textarea name="nouvellesBiographies[]" class="form-control" placeholder="Biographie du nouvel auteur"></textarea>
+        `;
+        authorContainer.appendChild(newAuthorFields);
+    }
+</script>
+</body>
+</html>
