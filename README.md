@@ -1,4 +1,4 @@
-## BookSmart : Un système de gestion de bibliothèque intelligent
+# BookSmart : Un système de gestion de bibliothèque intelligent
 
 Ce projet met en œuvre BookSmart, une application web conçue pour gérer efficacement une collection de livres. Développé avec Spring Boot et Thymeleaf, il permet aux utilisateurs d'ajouter, de modifier, de supprimer et de consulter des informations détaillées sur les livres, y compris les informations sur leurs auteurs.
 
@@ -60,11 +60,13 @@ Le projet est structuré comme suit :
 
  *Ajout d'un livre et l'affichage à l'aide de la page de détails:
 
-
 https://github.com/user-attachments/assets/dd0301af-32cf-4a9c-b92c-973755b75890
 
 
+ *Le controle d'erreur (Ajout d'un livre invalide) :
 
+
+https://github.com/user-attachments/assets/238a93d5-696e-4787-8d1a-3e30bbd250eb
 
 
  *Modifier , supprimer et chercher un livre :
