@@ -31,6 +31,11 @@ Ce projet met en œuvre BookSmart, une application web conçue pour gérer effic
 
 Le projet est structuré comme suit :
 
+![image](https://github.com/user-attachments/assets/cba09305-e82a-4edf-a9a4-1e5fd1b2908f)
+
+![image](https://github.com/user-attachments/assets/50d9a9f3-2253-4d1a-8e44-302b64a2abce)
+
+
 - *src/main/java:* Contient le code source Java de l'application.
   - *com.example.monprojet.entities:* Contient les classes d'entité pour les données des livres et des auteurs.
   - *com.example.monprojet.controllers:* Contient les classes de contrôleur gérant les requêtes et réponses web.
@@ -48,3 +53,13 @@ Le projet est structuré comme suit :
 * *Mettre en œuvre un système de prêt :* Ajouter des fonctionnalités pour suivre les prêts de livres et les notifications de retard.
 * *Intégrer avec des API externes :* Récupérer des informations sur les livres à partir d'API externes comme Google Books ou Open Library pour élargir le catalogue.
 * *Améliorer l'expérience utilisateur :* Ajouter des fonctionnalités comme le tri, la pagination et le filtrage pour améliorer la navigation et la convivialité.
+
+### Demonstration
+
+ *Ajout d'un livre et l'affichage à l'aide de la page de détails:
+
+
+
+ *Modifier , supprimer et chercher un livre :
+ 
+
