@@ -61,6 +61,10 @@ Le projet est structuré comme suit :
  *Ajout d'un livre et l'affichage à l'aide de la page de détails:
 
 
+https://github.com/user-attachments/assets/dd0301af-32cf-4a9c-b92c-973755b75890
+
+
+
 
 
  *Modifier , supprimer et chercher un livre :
