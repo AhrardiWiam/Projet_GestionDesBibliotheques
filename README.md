@@ -58,17 +58,17 @@ Le projet est structuré comme suit :
 
 ### Demonstration
 
- *Ajout d'un livre et l'affichage à l'aide de la page de détails:
+ * *Ajout d'un livre et l'affichage à l'aide de la page de détails:
 
 https://github.com/user-attachments/assets/dd0301af-32cf-4a9c-b92c-973755b75890
 
 
- *Le controle d'erreur (Ajout d'un livre invalide) :
+* *Le controle d'erreur (Ajout d'un livre invalide) :
 
 
 https://github.com/user-attachments/assets/238a93d5-696e-4787-8d1a-3e30bbd250eb
 
 
- *Modifier , supprimer et chercher un livre :
+* *Modifier , supprimer et chercher un livre :
  
 
