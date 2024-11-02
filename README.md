@@ -38,6 +38,9 @@ Le projet est structuré comme suit :
 
 - *src/main/java:* Contient le code source Java de l'application.
   - *com.example.monprojet.entities:* Contient les classes d'entité pour les données des livres et des auteurs.
+ 
+    ![image](https://github.com/user-attachments/assets/462d045e-1a9b-4d36-b016-7e6cbd830a55)
+
   - *com.example.monprojet.controllers:* Contient les classes de contrôleur gérant les requêtes et réponses web.
   - *com.example.monprojet.repositories:* Contient les classes de référentiel pour l'interaction avec la base de données.
   - *com.example.monprojet.services:* Contient les classes de service pour la logique métier et la manipulation des données.
