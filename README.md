@@ -54,7 +54,6 @@ Le projet est structuré comme suit :
 * *Mettre en œuvre l'authentification des utilisateurs :* Ajouter des fonctionnalités de connexion et d'inscription des utilisateurs pour un accès sécurisé au système de gestion de bibliothèque.
 * *Ajouter d'autres critères de recherche :* Permettre aux utilisateurs de rechercher des livres par genre, auteur ou date de publication.
 * *Mettre en œuvre un système de prêt :* Ajouter des fonctionnalités pour suivre les prêts de livres et les notifications de retard.
-* *Intégrer avec des API externes :* Récupérer des informations sur les livres à partir d'API externes comme Google Books ou Open Library pour élargir le catalogue.
 * *Améliorer l'expérience utilisateur :* Ajouter des fonctionnalités comme le tri, la pagination et le filtrage pour améliorer la navigation et la convivialité.
 
 ### Demonstration
